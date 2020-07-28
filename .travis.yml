@@ -13,8 +13,8 @@ script:
 after_script:
   - cd ./public
   - git init
-  - git config user.name "LinXunFeng"
-  - git config user.email "598600855@qq.com"
+  - git config user.name "zeqinjie"
+  - git config user.email "187519328@qq.com"
   - git add .
   - git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
   # Github Pages
@@ -34,4 +34,4 @@ branches:
 
 env:
   global:
-   - GH_REF: github.com/LinXunFeng/linxunfeng.github.io.git
+   - GH_REF: github.com/zeqinjie/zeqinjie.github.io
