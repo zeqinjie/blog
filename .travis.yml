@@ -34,4 +34,4 @@ branches:
 
 env:
   global:
-   - GH_REF: github.com/zeqinjie/zeqinjie.github.io
+   - GH_REF: github.com/zeqinjie/zeqinjie.github.io.git

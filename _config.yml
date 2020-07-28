@@ -13,7 +13,7 @@ avatar: /source/images/profile/avatar.jpg
 favicon: /source/images/profile/favicon.png
 top_img: /source/images/profile/water.jpg
 language: zh-Hans
-timezone: Asia/ShenZhen
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
