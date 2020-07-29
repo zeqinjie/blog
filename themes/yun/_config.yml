@@ -53,10 +53,16 @@ social:
     icon: icon-user-line
     color: "#8E71C1"
 
+# pages:
+#   - name: linxufeng
+#     url: https://linxunfeng.top/
+#     icon: icon-men-line
+#     color: dodgerblue
+
 pages:
-  - name: linxufeng
-    url: https://linxunfeng.top/
-    icon: icon-men-line
+  - name: 我的小伙伴们
+    url: /links/
+    icon: icon-genderless-line
     color: dodgerblue
 
 # pages
@@ -75,7 +81,7 @@ girls:
 # Sidebar Avatar
 avatar:
   enable: true
-  url: /Yun.png
+  url: https://avatars0.githubusercontent.com/u/8444646?s=460&u=92eeef27cb894c8d36a516501f39941ab89cd7d0&v=4
   # If true, the avatar would be dispalyed in circle.
   rounded: true
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
@@ -276,7 +282,7 @@ vendors:
 # UI
 banner:
   enable: true
-  title: zeqin的小站
+  title: Zeqin的小站
   src: /js/ui/banner.js
   border: true
   cloud:
@@ -436,7 +442,7 @@ post_meta:
 
 # notice pin board
 notice:
-  enable: false
+  enable: true
   content: Thanks for watching my blog.
 
 # third party
@@ -682,7 +688,7 @@ mourn:
 
 # SEO
 # https://ziyuan.baidu.com/linksubmit/index
-baidu_push: false
+baidu_push: true
 
 # custom (You can use variables.)
 custom:
