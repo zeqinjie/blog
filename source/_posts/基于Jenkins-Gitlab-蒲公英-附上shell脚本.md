@@ -17,7 +17,7 @@ tags:
 > 1. 安装完使用命令 java -version检查当前版本
 > 2. java选择如图
 
-![](https://zeqinjie.github.io/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/1.png)
+![](/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/1.png)
 
 2. 安装 Jenkins
 - 先确保已安装[Homebrew](https://brew.sh/index_zh-cn) 
@@ -261,22 +261,22 @@ echo "===Finished.共花费时间: ${SECONDS}s==="
     1. 选择新建任务
     2. 如建远程develop。保存名称为remove_develop 项目
     
-![](https://zeqinjie.github.io/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/2.png)
+![](/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/2.png)
     
 2. 配置任务-源码管理
 
-![](https://zeqinjie.github.io/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/3.png)
+![](/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/3.png)
 
 3. 配置任务 - 定时触发器配置(可选)[参考](https://www.jianshu.com/p/509c59391b3b)
 
 
-![](https://zeqinjie.github.io/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/4.png)
+![](/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/4.png)
 
 
 4. 配置任务 - 构建执行shell脚本命令
 
 
-![](https://zeqinjie.github.io/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/5.png)
+![](/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/5.png)
 
 
 
@@ -284,19 +284,19 @@ echo "===Finished.共花费时间: ${SECONDS}s==="
 ##### 项目任务建立 （本地dev 远程dev 远程master）
 
 
-![](https://zeqinjie.github.io/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/6.png)
+![](/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/6.png)
 
 ##### 执行构建
 
-![](https://zeqinjie.github.io/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/7.png)
+![](/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/7.png)
 
 ##### 执行历史
 
-![](https://zeqinjie.github.io/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/8.png)
+![](/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/8.png)
 
 #### 蒲公英平台 
 
-![](https://zeqinjie.github.io/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/9.png)
+![](/images/2019/基于Jenkins-Gitlab-蒲公英-附上shell脚本/9.png)
 
 
 ## 局域网ip + 端口访问失败

@@ -8,9 +8,9 @@ tags:
 
 # Jenkins自动构建 去年基于Jenkins平台搭建的自动构建流程图
 
-![](https://zeqinjie.github.io/images/2020/Jenkins+fastlane自动构建/1.png)
+![](/images/2020/Jenkins+fastlane自动构建/1.png)
 
-![](https://zeqinjie.github.io/images/2020/Jenkins+fastlane自动构建/2.png)
+![](/images/2020/Jenkins+fastlane自动构建/2.png)
 ## 目录
 
 - Jenkins 作用及特点
@@ -59,6 +59,6 @@ Jenkins是开源CI&CD软件领导者， 提供超过1000个插件来支持构建
     - SwiftLint语法检测集成
     - ...
 
-![](https://zeqinjie.github.io/images/2020/Jenkins+fastlane自动构建/3.png)
+![](/images/2020/Jenkins+fastlane自动构建/3.png)
 
 ### 具体配置待补充 , 未完待续..

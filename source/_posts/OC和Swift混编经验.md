@@ -137,7 +137,7 @@ func DLog(str: String) {
 > 3. 勾选需要转换的 target （pod 引用不用勾选），Next 
 > 4. 选择转换选项，Next 
 
-![](https://zeqinjie.github.io/images/2018/OC和Swift混编经验/1.png)
+![](/images/2018/OC和Swift混编经验/1.png)
 
 
 
@@ -146,7 +146,7 @@ func DLog(str: String) {
 > 1. [插件安装AppStore下载地址](https://itunes.apple.com/cn/app/swiftify-objective-c-converter-for-xcode/id1183412116?mt=12)
 > 2. [在线转换地址](https://objectivec2swift.com/#/home)
 
-![](https://zeqinjie.github.io/images/2018/OC和Swift混编经验/2.png)
+![](/images/2018/OC和Swift混编经验/2.png)
 
 
 ### 快速将json转化为Swift的模型对象
@@ -154,7 +154,7 @@ func DLog(str: String) {
 > 1. 它不仅支持Swift,还支持其他语言比如Kotlin,Java,C#,Ruby,Object-c,Python
 > 1. [在线链接](https://app.quicktype.io/)
 
-![](https://zeqinjie.github.io/images/2018/OC和Swift混编经验/3.png)
+![](/images/2018/OC和Swift混编经验/3.png)
 
 ### 通过R.swift快速生成资源代码
 根据项目内容来自动化生 ImageName 和 SegueName代码 可以使用Switf的自动化工具了，[R.swift](https://github.com/mac-cain13/R.swift) 和 [SwiftGen](https://github.com/SwiftGen/SwiftGen)

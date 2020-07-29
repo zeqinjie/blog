@@ -6,13 +6,11 @@ tags:
   - iOS
 ---
 
-[掘金地址](https://juejin.im/post/5b3ca2d05188251afe7b66be)
-
 ## ios摘要
 * [iOS10里的通知与推送](http://www.cocoachina.com/ios/20170126/18618.html)
 * [国内 90%以上的 iOS 开发者，对 APNs 的认识都是错的](https://www.jianshu.com/p/ace1b422bad4)
 ## 体系图
-![](https://zeqinjie.github.io/images/2018/iOS怎么推送统计到达率/1.png)
+![](/images/2018/iOS怎么推送统计到达率/1.png)
 
 
 ## 直接进入正题如何统计到达

@@ -31,14 +31,14 @@ pod 'Firebase/RemoteConfig'，
 <!--> -FIRAnalyticsDebugDisabled-->
 <!---FIRAnalyticsDebugEnabled-->
 
-![](https://zeqinjie.github.io/images/2018/Firebase的使用集合（二）/1.png)
+![](/images/2018/Firebase的使用集合（二）/1.png)
 
 > Firebase   DebugView调试部分 <br>
 > [√] FIRAnalyticsDebugDisabled : 调试关闭<br>
 > [√] FIRAnalyticsDebugEnabled : 调试打开<br>
 
 #### 创建参数及条件
-![](https://zeqinjie.github.io/images/2018/Firebase的使用集合（二）/2.png)
+![](/images/2018/Firebase的使用集合（二）/2.png)
 
 Parameters ：参数列表
 - 设定参数的指定条件
@@ -119,17 +119,17 @@ pod 'FirebaseABTesting'
 #### 创建A/B TEST实验
 > 创建remote_a/b_test实例
 
-![](https://zeqinjie.github.io/images/2018/Firebase的使用集合（二）/3.png)
+![](/images/2018/Firebase的使用集合（二）/3.png)
 
 > 创建测试条件及参数
 - 控制组，Variant A  两组数据
 
-![](https://zeqinjie.github.io/images/2018/Firebase的使用集合（二）/4.png)
+![](/images/2018/Firebase的使用集合（二）/4.png)
 
 > 测试配置执行的ID凭证
 - ID凭证即是fcmToken
 
-![](https://zeqinjie.github.io/images/2018/Firebase的使用集合（二）/5.png)
+![](/images/2018/Firebase的使用集合（二）/5.png)
 
 > 通过远程配置的方式获取到参数条件
 - 参考Remote Configure 远程配置方式

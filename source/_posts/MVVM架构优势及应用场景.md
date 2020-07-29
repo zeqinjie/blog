@@ -17,7 +17,7 @@ tags:
 
 ---
 - [从入门到放弃](https://www.v2ex.com/amp/t/367308)
-![](https://zeqinjie.github.io/images/2019/MVVM架构优势及应用场景/1.png)
+![](/images/2019/MVVM架构优势及应用场景/1.png)
 ## 为什么要使用 RxSwift ？
 
 ### 我们先看一下 RxSwift 能够帮助我们做些什么：
@@ -316,7 +316,7 @@ Observable.zip(
 
 ### RxSwift 的单向数据流
 RxSwift 可以在 UniDirectional Data Flow 的各个阶段都发挥作用，从而让 Data 的处理和流动更加简洁和清晰。
-![](https://zeqinjie.github.io/images/2019/MVVM架构优势及应用场景/2.png)
+![](/images/2019/MVVM架构优势及应用场景/2.png)
 
 - 通过对 RxCocoa 的各种回调进行统一处理，方便了"交互"「Interact」的处理。
 - 通过对 Observable 的 transform 和 composite，方便了 Action 的生成（比如使用 throttle 来压缩 Action）。
@@ -338,7 +338,7 @@ RxSwift 可以在 UniDirectional Data Flow 的各个阶段都发挥作用，从�
 
 > 同样使用 MVVM 架构时，Model 与 View|ViewControllter 之间是不允许直接通信的，而是由 ViewModel 层进行协调
 
-![](https://zeqinjie.github.io/images/2019/MVVM架构优势及应用场景/3.png)
+![](/images/2019/MVVM架构优势及应用场景/3.png)
 #### 基于RxSwift对网络工具封装 TWSwiftHttpTool
 ```
 // 声明一个枚举，包含成功和失败的情况
