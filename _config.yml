@@ -8,16 +8,12 @@ subtitle: 'Lightly do not say gives up, otherwise sorry oneself'
 description: ''
 keywords:
 author: zhengzeqin
-email: zhengzeqin@addcn.com
-avatar: /source/images/profile/avatar.jpg
-favicon: /source/images/profile/favicon.png
-top_img: /source/images/profile/water.jpg
-language: zh-Hans
-timezone: Asia/Shanghai
+language: zh-CN
+timezone: 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://vigilant-lovelace-ee6cb4.netlify.app/
+url: https://zhengzeqin.app/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -97,15 +93,8 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
-follow:
-  enable: true
-  url: 'https://github.com/zeqinjie'
-  text: 'Follow Me'
+theme: yun
 
-links_title: Links   # 配置友链的标题文字
-links:
-  掘金地址: https://juejin.im/user/5b3c9c1ce51d45191716cb97 # 名称：URL
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -114,6 +103,4 @@ deploy:
   repository: https://github.com/zeqinjie/zeqinjie.github.io.git
   branch: master
 
-  search:
-  path: search.xml
-  field: post
+
