@@ -149,7 +149,7 @@ tags:
 
 > 目前我们部门 `Jenkins` 平台已集成，自动化构建 `测试包` ，`AppStore包`，` 图片压缩`，`OCLint` `SwiftLint` 语法检测，`组件自动构建`等，未来可期...
 
-![](/images/2020/iOS开发老司机的神兵利器-效率工具/iOS_tools_Jenkins.png)
+![](/images/2020/iOS开发老司机的神兵利器-效率工具/iOS_tools_Jenskin.png)
 
 ## 日常用的工具集
 
