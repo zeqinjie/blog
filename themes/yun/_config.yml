@@ -399,6 +399,7 @@ post_edit:
   enable: false
   url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name # Link for view source.
 
+# url: https://zhengzeqin.netlify.app/
 # Footer Settings
 # ---------------
 footer:
