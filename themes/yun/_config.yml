@@ -618,7 +618,7 @@ engine_search:
 
 # https://github.com/wzpan/hexo-generator-search
 local_search:
-  enable: true
+  enable: false
   src: /js/search/local-search.js
 
 # https://github.com/oncletom/hexo-algolia
