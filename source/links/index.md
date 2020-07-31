@@ -7,7 +7,7 @@ description: 博客小伙伴
 comments: true
 links:
   - url: https://linxunfeng.top/
-    avatar: https://avatars3.githubusercontent.com/u/19367531?s=460&u=50f180a9aead4aaf6b0eeba3ec83ea336416bf14&v=4
+    avatar: https://avatars3.githubusercontent.com/u/19367531?s=460&u=50f180a9aead4aaf6b0eeba3ec83ea336416bf14&v=4.jpg
     name: linxunfeng
     blog: linxunfeng'blog
     desc: All at sea.
