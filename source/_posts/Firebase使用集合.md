@@ -65,15 +65,15 @@ pod 'GoogleTagManager'   // GTM SDK
 ```
 - 登录GTM的平台 [地址](https://tagmanager.google.com/?hl=zh_CN#/org/xM83TFWlQfiVaBKyzHY6Zw)
 
-![](/images/2018/Firebase的使用集合/1.png)
+![](/images/2018/Firebase使用集合/1.png)
 
 - 创建触发器
 
-![](/images/2018/Firebase的使用集合/2.png)
+![](/images/2018/Firebase使用集合/2.png)
 
 - 创建代码  GA-ID变量即是 我们的Google Analytics平台的ID
 
-![](/images/2018/Firebase的使用集合/3.png)
+![](/images/2018/Firebase使用集合/3.png)
 
 > 简述：我们先在 GTM container 网页上设定想追踪的 tag（标籤），每个 tag 会包含一个 trigger（触发条件），当 Firebase 发送事件后 GTM 会去比对这个事件是不是符合某个 tag 的触发条件，在这次的例子中就会将数据发送到 GA 报表上。触发条件比较灵活，可以自定义。包括维度的划分。这里就不再详细介绍。
 
@@ -103,7 +103,7 @@ pod 'GoogleTagManager'   // GTM SDK
 1. 通过cocopod库设置Fcm sdk, fcm 中支持[通知消息和数据消息](https://firebase.google.com/docs/cloud-messaging/concept-options?authuser=0)
 2. 在"专案设置-设置-Cloud Messaging"中上传开发者凭证到fcm平台
 
-![](/images/2018/Firebase的使用集合/4.png)
+![](/images/2018/Firebase使用集合/4.png)
 
 3. 配置代码如下
 
@@ -176,7 +176,7 @@ pod 'Firebase/Messaging'
 
 ## Performace监控
 
-![](/images/2018/Firebase的使用集合/5.png)
+![](/images/2018/Firebase使用集合/5.png)
 
 firebase 的performance能采集到数据有[链接](https://support.google.com/firebase/answer/6318039?hl=zh-Hans)
 - 启动速度
@@ -192,7 +192,7 @@ pod 'Firebase/Performance'
  
 #### 关于自定义采集 page_speed
 
-![](/images/2018/Firebase的使用集合/6.png)
+![](/images/2018/Firebase使用集合/6.png)
 
 ```
 // 自定义采集是通过setValue:forAttribute 方式设置采集属性及值
