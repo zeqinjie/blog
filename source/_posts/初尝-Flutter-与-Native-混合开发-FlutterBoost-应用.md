@@ -59,7 +59,7 @@ end
 
 ![](/images/2020/初尝-Flutter-与-Native-混合开发-FlutterBoost-应用/3.png)
 
-## 混编原生部分
+## Native 部分
 
 ![](/images/2020/初尝-Flutter-与-Native-混合开发-FlutterBoost-应用/3.png)
 
@@ -332,7 +332,7 @@ class TWRouterBoost extends NavigatorObserver{
 
 > 用 flutter 重构更多页面, 体验感觉和原生差不多
 
-![](/images/2020/初尝-Flutter-与-Native-混合开发-FlutterBoost-应用/6.png)
+![](/images/2020/初尝-Flutter-与-Native-混合开发-FlutterBoost-应用/6.jpg)
 
 
 
@@ -340,34 +340,20 @@ class TWRouterBoost extends NavigatorObserver{
 
 > - 为了减少与原生桥接，尽量让 Android 和 iOS 能公用一套，那么接下来要做的是一些基础设置建设了。包括 网络库，状态管理，图片缓存，数据缓存等...
 
-![](/images/2020/初尝-Flutter-与-Native-混合开发-FlutterBoost-应用/7.png)
-
-#####  网络库
-- [Dio](https://github.com/flutterchina/dio)
-##### 状态管理
-- [bloc](https://github.com/felangel/bloc)
-- [provider](https://github.com/rrousselGit/provider)
-##### 数据库
-- [sqflite](https://github.com/tekartik/sqflite)
-##### 数据库
-- [sqflite](https://github.com/tekartik/sqflite)
-##### 数据库
-- [sqflite](https://github.com/tekartik/sqflite)
-##### 图片缓存库
-- [flutter_cached_network_image](https://github.com/Baseflow/flutter_cached_network_image)
-##### 刷新控件
-- [SmartRefreshLayout](https://github.com/scwang90/SmartRefreshLayout)
-##### 轮播
-- [flutter_swiper](https://github.com/best-flutter/flutter_swiper)
-##### 本地通知
-- [flutter_local_notifications](https://github.com/MaikuB/flutter_local_notifications)
-##### 菜单
-- [flutter_slidable](https://github.com/letsar/flutter_slidable)
-##### 地图
-- [flutter_amap](https://github.com/best-flutter/flutter_amap)
-- [flutter_amap_location](https://github.com/best-flutter/flutter_amap_location)
-##### 调试工具
-- [flutter_slidable](https://github.com/learn-flutter-dev/flutter_flipperkit)
+| 分类          | 地址           | star           |
+| -------------- | -------------- | -------------- |
+| 网络库 |  [Dio](https://github.com/flutterchina/dio) | 8.2k |
+| 状态管理 | [bloc](https://github.com/felangel/bloc) | 5.3k |
+| 状态管理 | [provider](https://github.com/rrousselGit/provider) | 2.8k |
+| 数据库 | [sqflite](https://github.com/tekartik/sqflite) | 1.8k |
+| 图片缓存库 | [flutter_cached_network_image](https://github.com/Baseflow/flutter_cached_network_image) | 1.4k |
+| 刷新控件 | [SmartRefreshLayout](https://github.com/scwang90/SmartRefreshLayout) | 21.3k |
+| 轮播 | [flutter_swiper](https://github.com/best-flutter/flutter_swiper) | 2.6k |
+| 本地通知 | [flutter_local_notifications](https://github.com/MaikuB/flutter_local_notifications) | 1.1k |
+| 菜单 | [flutter_slidable](https://github.com/letsar/flutter_slidable) | 1.4k |
+| 地图 | [flutter_amap](https://github.com/best-flutter/flutter_amap) | 137 |
+| 地图 | [flutter_amap_location](https://github.com/best-flutter/flutter_amap_location) | 249 |
+| 调试工具 | [flutter_slidable](https://github.com/learn-flutter-dev/flutter_flipperkit) | 308 |
 
 ## 目前项目结构
 ```
