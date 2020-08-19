@@ -17,6 +17,7 @@ tags:
 
 ## Flutter 混编现有项目
 > 正式接入：
+
 1. 创建 Flutter 项目`flutter create -t module flutter_module`, 建议创建完可以执行用 AndoirdStudio 编译执行，看是否正常,不过记得删除生成的ios 文件，否则会遇第4条说的flutter_export_environment 问题
 
 2. 将创建的 flutter_module 项目到自己目标仓库中
@@ -71,7 +72,7 @@ end
 ### 示例 TWFlutterUtil 部分
 > `TWFlutterUtil.h`	
 
-```
+```objc
 @interface TWFlutterUtil : NSObject
 
 + (instancetype)shareInstance;
@@ -130,7 +131,7 @@ end
 
 > `TWFlutterUtil.m`	
 
-```
+```objc
 #import "TWFlutterUtil.h"
 #import <flutter_boost/FlutterBoost.h>
 #import "TWFlutterPlatformRouter.h"
@@ -196,7 +197,7 @@ end
 
 > 页面采用文件 `page` `页面类名`，作为注册 id
 
-```
+```objc
 //在 iOS 中 TWFlutterUtil 打开更多页面
 [TWFlutterUtil open:@"TWMorePage"
               urlParams:@{@"isDebug":API_DEBUG == 1 ? @"1" : @"0",
@@ -220,7 +221,7 @@ end
 ### 示例 TWFlutterBoostPage 部分
 > `TWFlutterBoostPage`
 
-```
+```dart
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
 import 'package:flutter_module/common/tw_app_color.dart';
@@ -271,7 +272,7 @@ class _TWFlutterBoostAppState extends State<TWFlutterBoostApp> {
 
 > `TWRouterBoost`
 
-```
+```dart
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
 import 'package:flutter_module/features/tw_more_page.dart';

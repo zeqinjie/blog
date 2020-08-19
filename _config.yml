@@ -54,7 +54,7 @@ future: true
 #   hljs: false
 
 highlight:
-  enable: true
+  enable: false
   
 # 启用 prism
 prismjs:
