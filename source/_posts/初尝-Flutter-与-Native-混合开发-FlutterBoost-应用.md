@@ -348,7 +348,8 @@ class TWRouterBoost extends NavigatorObserver{
 | 状态管理 | [provider](https://github.com/rrousselGit/provider) | 2.8k |
 | 数据库 | [sqflite](https://github.com/tekartik/sqflite) | 1.8k |
 | 图片缓存库 | [flutter_cached_network_image](https://github.com/Baseflow/flutter_cached_network_image) | 1.4k |
-| 刷新控件 | [SmartRefreshLayout](https://github.com/scwang90/SmartRefreshLayout) | 21.3k |
+| 刷新控件 | [flutter_easyrefresh](https://github.com/xuelongqy/flutter_easyrefresh) | 2.2k |
+| 刷新控件 | [flutter_pulltorefresh](https://github.com/peng8350/flutter_pulltorefresh) | 1.6k |
 | 轮播 | [flutter_swiper](https://github.com/best-flutter/flutter_swiper) | 2.6k |
 | 本地通知 | [flutter_local_notifications](https://github.com/MaikuB/flutter_local_notifications) | 1.1k |
 | 菜单 | [flutter_slidable](https://github.com/letsar/flutter_slidable) | 1.4k |
