@@ -9,10 +9,10 @@ tags:
 
 
 ## 前言
-> 在跨平台开发中 `Flutter` 优势很明简单总结 : <br>
+> 在跨平台开发中 `Flutter` 优势很明显，简单总结 : <br>
 > 1. 接近原生的性能  
 > 2. 热重载  
-> 3. 丰富的组件。<br>
+> 3. 丰富的组件<br>
 > 考虑项目有大量原生业务，我们也不可能基于 Flutter 重构所有的业务。<br>因此只能在原有的基础上混合使用 Flutter 来开发新业务或重构旧业务。<br>参考闲鱼，哈罗等，他们也提供相应的解决混合开发方案 [flutter_boost](https://github.com/alibaba/flutter_boost) 和 [flutter_thrio](https://github.com/hellobike/flutter_thrio)。 <br>目前我们采用 flutter_boost 作为我们 tw591 项目的解决方案。
 
 ## Flutter 混编现有项目
@@ -66,150 +66,115 @@ end
 
 > - TWFlutterUtil 单例类用来注册 flutter 引擎，同时封装一层调用，避免 FlutterBoostPlugin 直接调用
 > - TWFlutterPlatformRouter 基于 Flutter_boost DEMO 提供的基础上，根据我们项目业务做了调整，主要是 flutter 与 Native 平台交互的 Router
-> - TWFlutterJumpUtil 主要是处理 Flutter 与 Native 相互跳转间的业务逻辑
-
+> - TWFlutterJumpUtil 主要是处理 Flutter 与 Native 相互路由跳转间的业务逻辑
+> - TWFlutterNativePageName 定义页面路由名称
+> - TWFlutterNativeEventUtil 主要是处理 Flutter 与 Native 事件的业务逻辑
 
 ### 示例 TWFlutterUtil 部分
-> `TWFlutterUtil.h`	
+> `TWFlutterUtil.swift`	
 
-```objc
-@interface TWFlutterUtil : NSObject
-
-+ (instancetype)shareInstance;
-
-/// 注册 flutter 引擎
-- (void)registerFlutter;
-
-#pragma mark - open/close Page
-
-/**
- * 关闭页面，混合栈推荐使用的用于操作页面的接口
- *
- * @param uniqueId 关闭的页面唯一ID符
- * @param resultData 页面要返回的结果（给上一个页面），会作为页面返回函数的回调参数
- * @param exts 额外参数
- * @param completion 关闭页面的即时回调，页面一旦关闭即回调
- */
-+ (void)close:(NSString *)uniqueId
-       result:(NSDictionary *)resultData
-         exts:(NSDictionary *)exts
-   completion:(void (^)(BOOL))completion;
-
-/**
- * 打开新页面（默认以push方式），混合栈推荐使用的用于操作页面的接口；通过urlParams可以设置为以present方式打开页面：urlParams:@{@"present":@(YES)}
- *
- * @param url 打开的页面资源定位符
- * @param urlParams 传人页面的参数; 若有特殊逻辑，可以通过这个参数设置回调的id
- * @param exts 额外参数
- * @param resultCallback 当页面结束返回时执行的回调，通过这个回调可以取得页面的返回数据，如close函数传入的resultData
- * @param completion 打开页面的即时回调，页面一旦打开即回调
- */
-+ (void)open:(NSString *)url
-   urlParams:(NSDictionary *)urlParams
-        exts:(NSDictionary *)exts
-       onPageFinished:(void (^)(NSDictionary *))resultCallback
-  completion:(void (^)(BOOL))completion;
-
-/**
- * Present方式打开新页面，混合栈推荐使用的用于操作页面的接口
- *
- * @param url 打开的页面资源定位符
- * @param urlParams 传人页面的参数; 若有特殊逻辑，可以通过这个参数设置回调的id
- * @param exts 额外参数
- * @param resultCallback 当页面结束返回时执行的回调，通过这个回调可以取得页面的返回数据，如close函数传入的resultData
- * @param completion 打开页面的即时回调，页面一旦打开即回调
- */
-+ (void)present:(NSString *)url
-      urlParams:(NSDictionary *)urlParams
-           exts:(NSDictionary *)exts
- onPageFinished:(void (^)(NSDictionary *))resultCallback
-     completion:(void (^)(BOOL))completion;
-
-@end
-
-```
-
-> `TWFlutterUtil.m`	
-
-```objc
-#import "TWFlutterUtil.h"
-#import <flutter_boost/FlutterBoost.h>
-#import "TWFlutterPlatformRouter.h"
-
-@interface TWFlutterUtil ()
-
-@property (nonatomic, strong) FlutterEngine *engine;
-/// flutter 模块路由
-@property (nonatomic, strong) TWFlutterPlatformRouter *router;
-@end
-
-@implementation TWFlutterUtil
-
-+ (instancetype)shareInstance{
-    static dispatch_once_t once;
-    static TWFlutterUtil*singleton;
-    dispatch_once(&once, ^ {
-        singleton = [[TWFlutterUtil alloc] init];
-    });
-    return singleton;
-}
-
-- (void)registerFlutter {
-    WS(weakSelf);
-    TWFlutterPlatformRouter *router = [[TWFlutterPlatformRouter alloc]init];
-    self.router = router;
+```swift
+import UIKit
+import flutter_boost
+@objcMembers class TWFlutterUtil: NSObject {
     
-    [FlutterBoostPlugin.sharedInstance startFlutterWithPlatform:router
-                                                        onStart:^(FlutterEngine *engine) {
-            weakSelf.engine = engine;
-    // 注册MethodChannel，监听flutter侧的getPlatformVersion调用
-    }];
+    static let shareInstance = TWFlutterUtil()
+    var router: TWFlutterPlatformRouter?
+    var engine: FlutterEngine?
+    
+    /// 注册 flutter 引擎
+    func registerFlutter() {
+        router = TWFlutterPlatformRouter()
+        guard let router = router else {return}
+        FlutterBoostPlugin.sharedInstance().startFlutter(with: router) {[weak self](engine) in
+            self?.engine = engine
+            HouseTool.dispatch(afterTime: 2.0) {
+                TWFlutterNativeEventUtil.sendConfigureInfo()
+            }
+        }
+    }
+    
+    // MARK: - sendEvent
+    
+    /**
+     * Native层往Dart层发送事件，事件名称通过eventName指定
+     *
+     * @param eventName 事件名称
+     * @param arguments 参数
+     */
+    open class func sendEvent(_ eventName: String, arguments: [AnyHashable: Any]) {
+        FlutterBoostPlugin.sharedInstance().sendEvent(eventName, arguments: arguments)
+    }
+    
+    /**
+    * 添加监听Dart层调用Native层的事件
+    *
+    * @param name 事件名称
+    * @param listner 事件监听器
+    */
+    open class func addEventListener(_ listener: @escaping FLBEventListener, name: String) -> FLBVoidCallback {
+        return FlutterBoostPlugin.sharedInstance().addEventListener(listener, forName: name)
+    }
+    
+    // MARK: - open/close Page
+    
+    /**
+     * 关闭页面，混合栈推荐使用的用于操作页面的接口
+     *
+     * @param uniqueId 关闭的页面唯一ID符
+     * @param resultData 页面要返回的结果（给上一个页面），会作为页面返回函数的回调参数
+     * @param exts 额外参数
+     * @param completion 注意必传 关闭页面的即时回调，页面一旦关闭即回调
+     */
+    open class func close(_ uniqueId: String, result resultData: [AnyHashable: Any], exts: [AnyHashable: Any], completion: @escaping (Bool) -> Void) {
+        FlutterBoostPlugin.close(uniqueId, result: resultData, exts: exts, completion: completion)
+    }
+    
+    /**
+     * 打开新页面（默认以push方式），混合栈推荐使用的用于操作页面的接口；通过urlParams可以设置为以present方式打开页面：urlParams:@{@"present":@(YES)}
+     *
+     * @param url 打开的页面资源定位符
+     * @param urlParams 传入页面的参数; 若有特殊逻辑，可以通过这个参数设置回调的id
+     * @param exts 额外参数
+     * @param resultCallback 当页面结束返回时执行的回调，通过这个回调可以取得页面的返回数据，如close函数传入的resultData
+     * @param completion 注意必传 打开页面的即时回调，页面一旦打开即回调
+     */
+    open class func open(_ url: String, urlParams: [AnyHashable: Any], exts: [AnyHashable: Any], onPageFinished resultCallback: @escaping ([AnyHashable: Any]) -> Void, completion: @escaping (Bool) -> Void) {
+        FlutterBoostPlugin.open(url, urlParams: urlParams, exts: exts, onPageFinished: resultCallback, completion: completion)
+    }
+    
+    /**
+     * Present方式打开新页面，混合栈推荐使用的用于操作页面的接口
+     *
+     * @param url 打开的页面资源定位符
+     * @param urlParams 传入页面的参数; 若有特殊逻辑，可以通过这个参数设置回调的id
+     * @param exts 额外参数
+     * @param resultCallback 当页面结束返回时执行的回调，通过这个回调可以取得页面的返回数据，如close函数传入的resultData
+     * @param completion 注意必传 打开页面的即时回调，页面一旦打开即回调
+     */
+    open class func present(_ url: String, urlParams: [AnyHashable: Any], exts: [AnyHashable: Any], onPageFinished resultCallback: @escaping ([AnyHashable: Any]) -> Void, completion: @escaping (Bool) -> Void) {
+        FlutterBoostPlugin.present(url, urlParams: urlParams, exts: exts, onPageFinished: resultCallback, completion: completion)
+    }
+    
 }
-
-#pragma mark - open/close Page
-+ (void)close:(NSString *)uniqueId
-       result:(NSDictionary *)resultData
-         exts:(NSDictionary *)exts
-   completion:(void (^)(BOOL))completion{
-    [FlutterBoostPlugin close:uniqueId result:resultData exts:exts completion:completion];
-}
-
-+ (void)open:(NSString *)url
-   urlParams:(NSDictionary *)urlParams
-        exts:(NSDictionary *)exts
-     onPageFinished:(void (^)(NSDictionary *))resultCallback
-  completion:(void (^)(BOOL))completion{
-    [FlutterBoostPlugin open:url urlParams:urlParams exts:exts onPageFinished:resultCallback completion:completion];
-}
-
-+ (void)present:(NSString *)url
-      urlParams:(NSDictionary *)urlParams
-           exts:(NSDictionary *)exts
- onPageFinished:(void (^)(NSDictionary *))resultCallback
-     completion:(void (^)(BOOL))completion{
-    [FlutterBoostPlugin present:url urlParams:urlParams exts:exts onPageFinished:resultCallback completion:completion];
-}
-
-@end
 ```
 
 ### Native 打开 Flutter 页面
 
 > 页面采用文件 `page` `页面类名`，作为注册 id
 
-```objc
+```swift
 //在 iOS 中 TWFlutterUtil 打开更多页面
-[TWFlutterUtil open:@"TWMorePage"
-              urlParams:@{@"isDebug":API_DEBUG == 1 ? @"1" : @"0",
-                                                    @"isDark":IS_DARK ? @"1" : @"0"}
-                   exts:@{@"isHideNavigationBar":@"1",
-                          @"title":@"更多"}
-         onPageFinished:^(NSDictionary * result) {
-        
-    } completion:nil];
+TWFlutterUtil.open("TWMorePage",
+                           urlParams: ["isDebug":API_DEBUG == 1 ? "1" : "0"],
+                           exts: ["isHideNavigationBar":"1"],
+                           onPageFinished: { (result) in
+        }) { (finish) in
+        }
     
-
 ```
+
+
 
 ## Flutter 部分
 
@@ -339,7 +304,7 @@ class TWRouterBoost extends NavigatorObserver{
 
 ## 优秀的第三方库
 
-> 为了减少与原生桥接，尽量让 Android 和 iOS 能公用一套，那么接下来要做的是一些基础设置建设了。包括 网络库，状态管理，图片缓存，数据缓存等...
+> 为了减少与原生桥接，尽量让 Android 和 iOS 能公用一套，那么接下来要做的是一些基础设施建设了。包括 网络库，状态管理，图片缓存，数据缓存等...
 
 | 分类          | 地址           | star           |
 | -------------- | -------------- | -------------- |
