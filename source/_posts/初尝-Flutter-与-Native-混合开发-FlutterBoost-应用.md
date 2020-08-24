@@ -62,7 +62,7 @@ end
 
 ## Native 部分
 
-![](/images/2020/初尝-Flutter-与-Native-混合开发-FlutterBoost-应用/3.png)
+![](/images/2020/初尝-Flutter-与-Native-混合开发-FlutterBoost-应用/4.png)
 
 > - TWFlutterUtil 单例类用来注册 flutter 引擎，同时封装一层调用，避免 FlutterBoostPlugin 直接调用
 > - TWFlutterPlatformRouter 基于 Flutter_boost DEMO 提供的基础上，根据我们项目业务做了调整，主要是 flutter 与 Native 平台交互的 Router
