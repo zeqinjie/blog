@@ -244,7 +244,6 @@ class TWRouterFlutterNative {
     tw_flutterMorePage: (String pageName, Map<String, dynamic> params, String _) => TWMorePage(params: params,),
   };
 }
-
 ```
 
 > `TWRouterBoost`
@@ -280,7 +279,6 @@ class TWRouterBoost extends NavigatorObserver{
     TWLog("flutterboost#didReplace");
   }
 }
-
 ```
 
 > TWFlutterNativeEvent
@@ -324,9 +322,9 @@ class TWFlutterNativeEvent {
     /// 打开评价，
     String open_page_url = "app:///xxxx/more_page?entrance=more_evalue&pushAnimation=1";
 	/// 闲鱼库打开 原生api
-    FlutterBoost.singleton
-        .open('TWFlutterOpenNative',exts: {"open_page_url":xxxx_url})
-        .then((value) => print('call me when page is finished. did recieve native route result $value'));
+    FlutterBoost.singleton.open(TWRouterFlutterNative.tw_flutterOpenNative, exts: {
+      "app_open_url": app_open_url
+    }).then((value) => print('call me when page is finished. did recieve native route result $value'));
  }
 ```
 
