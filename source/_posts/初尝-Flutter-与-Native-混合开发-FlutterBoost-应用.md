@@ -1,15 +1,5 @@
----
-title: 初尝 Flutter 与 Native 混合开发 - FlutterBoost 应用
-date: 2020-08-14 17:38:13
-categories: "iOS"
-tags:
-  - iOS
-  - Flutter
----
-
-
 ## 前言
-> 在跨平台开发中 `Flutter` 优势很明显，简单总结 : <br>
+> 在跨平台开发中 `Flutter` 优势很明了，简单总结 : <br>
 > 1. 接近原生的性能  
 > 2. 热重载  
 > 3. 丰富的组件<br>
@@ -25,14 +15,13 @@ tags:
 3. 在 Podfile 文件添加如下脚本
 
 ```
-// 注意：![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/913f7748bf1841e3827501c40a6ff75f~tplv-k3u1fbpfcp-zoom-1.image)这个指定路径即是你的 flutter_module 项目的目标路径
+// 注意：这个指定路径即是你的 flutter_module 项目的目标路径
 flutter_application_path = '../../TWFlutter591/flutter_module'
 load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
 
 target 'twhouse' do
 install_all_flutter_pods(flutter_application_path)
 end
-
 ```
 
 4. 注意项目报 flutter_export_environment.sh 文件路径错误
@@ -69,6 +58,7 @@ end
 > - TWFlutterJumpUtil 主要是处理 Flutter 与 Native 相互路由跳转间的业务逻辑
 > - TWFlutterNativePageName 定义页面路由名称
 > - TWFlutterNativeEventUtil 主要是处理 Flutter 与 Native 事件的业务逻辑
+
 
 ### 示例 TWFlutterUtil 部分
 > `TWFlutterUtil.swift`	
@@ -159,6 +149,7 @@ import flutter_boost
 }
 ```
 
+
 ### Native 打开 Flutter 页面
 
 > 页面采用文件 `page` `页面类名`，作为注册 id
@@ -174,14 +165,14 @@ TWFlutterUtil.open("TWMorePage",
     
 ```
 
-
-
 ## Flutter 部分
 
 ![](/images/2020/初尝-Flutter-与-Native-混合开发-FlutterBoost-应用/5.png)
 
 > - TWFlutterBoostPage 主要是 flutter 项目的入口页面
 > - TWRouterBoost 用于注册原生调用 flutter 的路由
+> - TWFlutterNativeEvent 用于 flutter 与 native 的事件处理
+> - TWRouterFlutterNative 路由跳转业务逻辑处理
 
 ### 示例 TWFlutterBoostPage 部分
 > `TWFlutterBoostPage`
@@ -232,6 +223,27 @@ class _TWFlutterBoostAppState extends State<TWFlutterBoostApp> {
 
   }
 }
+```
+
+> `TWRouterFlutterNative`
+
+```dart
+import 'package:flutter_boost/flutter_boost.dart';
+import 'package:flutter_module/features/mine/more/tw_more_page.dart';
+
+class TWRouterFlutterNative {
+
+  ///************** Flutter to Naitive *******************/
+  static const String tw_flutterOpenNative = 'TWFlutterOpenNative';
+
+  ///************** Naitive to Flutter *******************/
+  static const String tw_flutterMorePage = "TWMorePage";
+
+  /// 路由跳转逻辑处理 map
+  static Map<String, PageBuilder> routerPageBuilder = <String, PageBuilder>{
+    tw_flutterMorePage: (String pageName, Map<String, dynamic> params, String _) => TWMorePage(params: params,),
+  };
+}
 
 ```
 
@@ -240,21 +252,14 @@ class _TWFlutterBoostAppState extends State<TWFlutterBoostApp> {
 ```dart
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
-import 'package:flutter_module/features/tw_more_page.dart';
+import 'package:flutter_module/router/tw_router_flutter_native.dart';
 import 'package:flutter_module/util/tw_log.dart';
 
 class TWRouterBoost extends NavigatorObserver{
-  /// 初始化注册路由...
+
+  // 初始化注册路由...
   void registerRouter() {
-    FlutterBoost.singleton.registerPageBuilders(<String, PageBuilder>{
-      'TWMorePage': (String pageName, Map<String, dynamic> params, String _) {
-        String isDebug = params["isDebug"];
-        String isDark = params["isDark"];
-        String isLogin = params["isLogin"];
-        print("flutter_more_page params123:$params , $isDebug");
-        return TWMorePage(isLogin: isLogin == "1" ? true : false, isDebug: isDebug == "1" ? true : false,isDark: isDark == "1" ? true : false,);
-      },
-    });
+    FlutterBoost.singleton.registerPageBuilders(TWRouterFlutterNative.routerPageBuilder);
     FlutterBoost.singleton.addBoostNavigatorObserver(this);
   }
 
@@ -278,12 +283,41 @@ class TWRouterBoost extends NavigatorObserver{
 
 ```
 
+> TWFlutterNativeEvent
+
+```dart
+import 'package:flutter_boost/flutter_boost.dart';
+import 'package:flutter_module/config/tw_configure.dart';
+import 'package:flutter_module/util/tw_log.dart';
+
+class TWFlutterNativeEvent {
+
+  ///************** Native 发送给 Flutter 事件名称 *******************/
+  static final String tw_flutterNativeEventConfigureInfo = "EventConfigureInfo";
+
+  ///************** Flutter 发送给 Native 事件名称 *******************/
+
+  ///************** Native 发送给 Flutter 事件统一处理 *******************/
+
+  /// 监听启动配置信息
+  static void addConfigureInfo() {
+    TWLog("开始配置启动信息...");
+    FlutterBoost.singleton.channel.addEventListener(TWFlutterNativeEvent.tw_flutterNativeEventConfigureInfo,
+            (name, arguments) {
+          TWConfigure.singleton.configure(arguments);
+          return;
+        });
+  }
+}
+```
+
+
 ### Flutter 打开 Native 页面
 > 采用项目路由方式打开
 > 注意：`TWFlutterOpenNative` 标识 ID ，即是标记从 Flutter 页面打开 Native 页面 ，打开 Native 页面路由 exts 字段
 > 路由部分，建议是原来项目有的，统一Android 和 iOS 的路由规则标准，我们 iOS 采用 MGJRouter , Android 采用 ARouter。定义一套项目的路由 URL 标准
 
-```
+```dart
   ///************** Private Method *******************/
   void clickAction(int index) {
     TWLog("點擊 index = $index");
@@ -298,9 +332,7 @@ class TWRouterBoost extends NavigatorObserver{
 
 > 用 flutter 重构更多页面, 体验感觉和原生差不多
 
-![](/images/2020/初尝-Flutter-与-Native-混合开发-FlutterBoost-应用/6.jpg)
-
-
+![](/images/2020/初尝-Flutter-与-Native-混合开发-FlutterBoost-应用/6.png)
 
 ## 优秀的第三方库
 
@@ -317,6 +349,9 @@ class TWRouterBoost extends NavigatorObserver{
 | 刷新控件 | [flutter_pulltorefresh](https://github.com/peng8350/flutter_pulltorefresh) | 1.6k |
 | 轮播 | [flutter_swiper](https://github.com/best-flutter/flutter_swiper) | 2.6k |
 | 本地通知 | [flutter_local_notifications](https://github.com/MaikuB/flutter_local_notifications) | 1.1k |
+| Widgets | [flukit](https://github.com/flutterchina/flukit) | 2.6k |
+| Toast | [flutter_oktoast](https://github.com/OpenFlutter/flutter_oktoast) | 288 |
+| Toast | [FlutterToast](https://github.com/ponnamkarthik/FlutterToast) | 818 |
 | 菜单 | [flutter_slidable](https://github.com/letsar/flutter_slidable) | 1.4k |
 | 地图 | [flutter_amap](https://github.com/best-flutter/flutter_amap) | 137 |
 | 地图 | [flutter_amap_location](https://github.com/best-flutter/flutter_amap_location) | 249 |
