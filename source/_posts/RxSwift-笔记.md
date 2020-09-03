@@ -18,7 +18,7 @@ tags:
 
 ## 框架图
 
-![](https://user-gold-cdn.xitu.io/2019/4/16/16a2526a925ca9d2?w=3268&h=4356&f=png&s=1726162)
+![](/images/2020/RxSwift-笔记/1.png)
 
 - [链接](https://pan.baidu.com/s/16ng2UsSELCk4GCcWQ6d6Ew) 提取码: iepj 
 
