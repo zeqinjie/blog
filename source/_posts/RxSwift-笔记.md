@@ -18,7 +18,7 @@ tags:
 
 ## 框架图
 
-![](/images/2020/RxSwift-笔记/1.png)
+![](/images/2018/RxSwift-笔记/1.png)
 
 - [链接](https://pan.baidu.com/s/16ng2UsSELCk4GCcWQ6d6Ew) 提取码: iepj 
 
