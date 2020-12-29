@@ -47,7 +47,7 @@ tags:
 
 ## App Clip 在框架限制
 
-![](/images/2020/App-Clip-尝鲜/9.png)
+![](/images/2020/App-Clip-尝鲜/9.jpeg)
 
 ## 用户隐私保护
 
@@ -135,7 +135,7 @@ tags:
 > Version 版本号需要主项目一致
 
 ## Bundle ID 命名规则
-![](/images/2020/App-Clip-尝鲜/11.png)
+![](/images/2020/App-Clip-尝鲜/10.png)
 
 > App clip 所包含的功能必须是 main app 的子集。App clip 的 bundle ID 必须是 main app 的 bundle ID 后缀加上 `.Clip` 
 
