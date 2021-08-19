@@ -1,3 +1,10 @@
+---
+title: 01初识flutter和环境搭建
+date: 2021-07-21 19:03:02
+tags:
+  - Flutter
+---
+
 ## 跨平台解决方案
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/2127799/1627794173602-e5e50dc9-71b3-4450-b89e-d327833cc6f0.png#clientId=ufd473d58-39ca-4&from=paste&height=231&id=aVukp&margin=%5Bobject%20Object%5D&name=image.png&originHeight=461&originWidth=658&originalType=binary&ratio=1&size=188413&status=done&style=none&taskId=uaeecbea0-80b1-4bdb-b74a-284186b5fe4&width=329)
 ### RN
