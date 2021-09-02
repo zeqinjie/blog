@@ -399,7 +399,7 @@ flutter: 5. 调用 ZQLifeCycleStatefullWidgetState 的 build 方法
 ```
 
 #### 流程图
-![](/images/2021/04-06 Flutter开发初体验 & Widget 生命周期/1.png)
+![images](/images/2021/04-06 Flutter开发初体验 & Widget 生命周期/1.png)
 > 依次触发顺序
 
 - createState
@@ -439,7 +439,7 @@ flutter: 5. 调用 ZQLifeCycleStatefullWidgetState 的 build 方法
 | setState | 当需要更新 State 的视图时，需要手动调用这个函数，它会触发 build 函数。 |
 
 #### StatefulWidget & State 流程关系图
-![](/images/2021/04-06 Flutter开发初体验 & Widget 生命周期/2.png)
+![images](/images/2021/04-06 Flutter开发初体验 & Widget 生命周期/2.png)
 
 #### quesion
 > 在 setState 中 mounted 的作用是？
