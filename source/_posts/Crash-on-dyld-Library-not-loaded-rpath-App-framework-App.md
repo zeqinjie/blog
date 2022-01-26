@@ -2,6 +2,7 @@
 title: 'Crash on dyld: Library not loaded: @rpath/App.framework/App'
 date: 2022-01-25 11:24:29
 tags:
+  - Flutter
 ---
 
 
