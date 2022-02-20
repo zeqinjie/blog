@@ -1,8 +1,9 @@
 ---
 title: 一）Python 安装 & 规范
 date: 2022-02-20 16:37:12
+categories: "Python"
 tags:
-	- python
+	- Python
 ---
 
 
