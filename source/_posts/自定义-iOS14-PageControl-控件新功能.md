@@ -27,7 +27,7 @@ pod 'ZQEndlessPageControl'
 
 ## 效果
 
-![](/images/2021/自定义-iOS14-PageControl-控件新功能/1.gif)
+![](/images/2021/自定义 iOS14 PageControl 控件新功能/1.gif)
 
 
 ## 使用
