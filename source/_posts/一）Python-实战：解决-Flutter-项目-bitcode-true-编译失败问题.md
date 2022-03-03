@@ -18,6 +18,7 @@ tags:
 ### 思考
 之前有想过用 `shell` 、`ruby` 等去实现这个，搜索下发现有人提了思路 [传送门](https://stackoverflow.com/questions/27178452/set-xcode-build-setting-from-terminal)，我尝试过用 `stackoverflow`上 25 个赞的建议后，尝试发现能执行，但编译失败就放弃。后来采用 [pbxproj](https://github.com/kronenthaler/mod-pbxproj) 刚好是 `Python` 写的，是个契机，学以致用。
 ![](/images/2022/一）Python-实战：解决-Flutter-项目-bitcode-true-编译失败问题/3.png)
+
 ```shell
 #pod install
 xcodebuild -target house591 -configuration Debug ENABLE_BITCODE=YES
@@ -33,11 +34,14 @@ xcodebuild -target house591 -configuration Release ENABLE_BITCODE=YES
 ## 插件
 
 设置 `Xcode` `build Setting` 使用的是第三方插件 [传送门](https://github.com/kronenthaler/mod-pbxproj)
+
 ```python
 # 安装如下
 pip3 install pbxproj
 ```
+
 使用设置 Flutter 项目 Bitcode 核心代码
+
 ```python
 # 设置 bitcode
 def set_bit_code_path(path, is_close_bitcode=True):
@@ -63,11 +67,12 @@ def set_bit_code_flag(project, bitcode_str, target_name="Runner", configuration_
 - 直接终端执行，我们自己是使用 `ssh 工具`  [shuttle](https://github.com/fitztrev/shuttle)  一键执行-目前我们的项目往 `Flutter` 技术栈的方向转，所以建了三个 `Flutter module` 业务组件，因此我这边只建三个 Flutter 项目的脚本路径，后续视情况补充脚本命令。
 ![](/images/2022/一）Python-实战：解决-Flutter-项目-bitcode-true-编译失败问题/4.png)
 - 当然我们也可以直接终端执行，如下
+
 ```shell
 cd /Users/zhengzeqin/Desktop/GitLab/TWHouseScript; python disable_bitcode.py -p '/Users/zhengzeqin/Desktop/GitLab/tw591_salehouse' -s close
 ```
 
-- 其实 `shuttle` 的命令是用 `json` 来设置，可以结合 `[jsonnet](https://github.com/google/jsonnet)` 去动态生成，这样就可以复用给别人
+- 其实 `shuttle` 的命令是用 `json` 来设置，可以结合 [jsonnet](https://github.com/google/jsonnet) 去动态生成，这样就可以复用给别人
 
 ### 方式二
 
