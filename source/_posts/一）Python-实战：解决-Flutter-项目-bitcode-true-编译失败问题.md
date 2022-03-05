@@ -10,7 +10,7 @@ tags:
 ## 前言
 我们在写 flutter 项目时每次执行 `pub clean` 后， `.ios` 项目会重新创建，项目的 `bitcode` 会重置为 `true`，项目就是编译失败，相信大家都遇到过，每次都需要手动设置 `bitcode = false`，考虑这种手动操作繁琐让我团队成员不胜其扰。同时我近期有学习 `Python` ，就拿这练练手，通过 `py` 脚本一键处理这个问题，大家也就能愉快开发了~😆
 
-![](/images/2022/一）Python-实战：解决-Flutter-项目-bitcode-true-编译失败问题1.png)
+![](/images/2022/一）Python-实战：解决-Flutter-项目-bitcode-true-编译失败问题/1.png)
 
 ### bitcode 问题
 ![](/images/2022/一）Python-实战：解决-Flutter-项目-bitcode-true-编译失败问题/2.png)
