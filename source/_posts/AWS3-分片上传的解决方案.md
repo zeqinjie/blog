@@ -1,7 +1,9 @@
 ---
 title: AWS3 分片上传的解决方案
 date: 2021-08-27 17:30:03
+categories: "iOS"
 tags:
+  - iOS
 ---
 
 

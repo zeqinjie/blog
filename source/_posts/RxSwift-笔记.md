@@ -1,6 +1,7 @@
 ---
 title: RxSwift 笔记
 date: 2018-06-03 16:33:30
+categories: "iOS"
 tags:
   - RxSwift
 ---

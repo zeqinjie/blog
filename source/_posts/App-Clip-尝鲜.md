@@ -1,7 +1,9 @@
 ---
 title: App Clip 尝鲜
 date: 2020-12-29 16:40:34
+categories: "iOS"
 tags:
+	- iOS
 ---
 
 # iOS App Clip 尝鲜

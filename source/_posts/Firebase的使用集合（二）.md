@@ -3,7 +3,7 @@ title: Firebase的使用集合（二）
 date: 2018-12-06 19:03:02
 categories: "iOS"
 tags:
-  - iOS
+  - Firebase
 ---
 
 ## [远程配置](https://firebase.google.com/docs/remote-config/)

@@ -3,7 +3,7 @@ title: Jenkins-fastlane自动构建
 date: 2020-04-28 19:03:02
 categories: "iOS"
 tags:
-  - iOS
+  - CI/CD
 ---
 
 # Jenkins自动构建 去年基于Jenkins平台搭建的自动构建流程图

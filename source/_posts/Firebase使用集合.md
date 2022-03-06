@@ -3,7 +3,7 @@ title: Firebase的使用集合
 date: 2018-11-21 19:03:03
 categories: "iOS"
 tags:
-  - iOS
+  - Firebase
 ---
 
 # Firebase

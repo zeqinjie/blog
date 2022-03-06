@@ -3,7 +3,7 @@ title: MVVM架构优势及应用场景
 date: 2019-08-23 19:03:02
 categories: "iOS"
 tags:
-  - iOS
+  - RxSwift
 ---
 # RxSwift应用
 
