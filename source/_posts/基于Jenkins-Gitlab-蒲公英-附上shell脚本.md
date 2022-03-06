@@ -1,9 +1,9 @@
 ---
 title: 基于Jenkins-Gitlab-蒲公英-附上shell脚本
 date: 2019-04-11 19:03:00
-categories: "CI/CD"
+categories: "iOS"
 tags:
-  - iOS
+  - CI/CD
 ---
 # Jenkins 持续集成
 
