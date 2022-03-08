@@ -13,7 +13,7 @@ tags:
 
 ### minSdkVersion 版本问题
 
-![](/images/2022/二）Python-实战：解决-Flutter-项目-Android-minSdkVersion-及-kotlin-版本低的问题/1.png))
+![](/images/2022/二）Python-实战：解决-Flutter-项目-Android-minSdkVersion-及-kotlin-版本低的问题/1.png)
 
 ### kotlin 版本问题
 
