@@ -28,7 +28,7 @@ pod 'ZQEndlessPageControl'
 
 ## 效果
 
-<img src="https://github.com/zeqinjie/blog/blob/master/source/images/2021/%E8%87%AA%E5%AE%9A%E4%B9%89%20iOS14%20PageControl%20%E6%8E%A7%E4%BB%B6%E6%96%B0%E5%8A%9F%E8%83%BD/1.gif" alt="show" />
+<img src="https://github.com/zeqinjie/blog/blob/master/source/images/2021/%E8%87%AA%E5%AE%9A%E4%B9%89%20iOS14%20PageControl%20%E6%8E%A7%E4%BB%B6%E6%96%B0%E5%8A%9F%E8%83%BD/1.gif" width="444" height="960" align="middle"/>
 
 
 ## 使用
