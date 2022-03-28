@@ -12,13 +12,14 @@ tags:
 
 ## 如何选择合适的动画控件
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/2127799/1647183239924-5f5bcfcb-5ac1-45f0-baee-d1efb0653c8d.png#clientId=u28daff04-a71e-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=582&id=u5f995e8a&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1164&originWidth=2422&originalType=binary&ratio=1&rotation=0&showTitle=false&size=2853612&status=done&style=none&taskId=ud4addf3b-f058-44cf-839f-2b694ee04be&title=&width=1211)
+![](/images/2022/二）Flutter-动画详解（一）/1.png)
 
 ## 隐式动画
 
 ### Animated+`WidgetName`
 
-![iShot2022-03-27 21.56.19.gif](https://cdn.nlark.com/yuque/0/2022/gif/2127799/1648389416073-06dd80ec-70fb-4d39-bae2-235993066d32.gif#clientId=uea5ead90-a0aa-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=330&id=u0b4731a3&margin=%5Bobject%20Object%5D&name=iShot2022-03-27%2021.56.19.gif&originHeight=898&originWidth=694&originalType=binary&ratio=1&rotation=0&showTitle=false&size=2864325&status=done&style=none&taskId=udb08686c-756f-461b-94a4-bd72e845457&title=&width=255)
+<iframe src="/images/2022/二）Flutter-动画详解（一）/2.gif">
+
 
 ```dart
 Widget _buildAnimatedContainer() {
@@ -111,7 +112,7 @@ AnimatedSwitcher(
  
 ### 隐式动画都有个 curve 曲线
 
-![iShot2022-03-19 21.15.44.gif](https://cdn.nlark.com/yuque/0/2022/gif/2127799/1647695761187-6171a759-89e0-4b02-8d8c-439cc8debbe9.gif#clientId=u361a582e-1c1e-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=352&id=u0518b8da&margin=%5Bobject%20Object%5D&name=iShot2022-03-19%2021.15.44.gif&originHeight=986&originWidth=714&originalType=binary&ratio=1&rotation=0&showTitle=false&size=341959&status=done&style=none&taskId=u5078a836-6911-4fa1-a33b-8dcc65f8ee9&title=&width=255)
+<iframe src="/images/2022/二）Flutter-动画详解（一）/3.gif">
 
 ```dart
 /// 更多动画及曲线
@@ -150,7 +151,7 @@ Widget _buildAnimated() {
 - 旋转：Transform.rotate
    - angle: 0.0 -> 6.28 。 旋转一圈 
 
-![iShot2022-03-19 21.13.33.gif](https://cdn.nlark.com/yuque/0/2022/gif/2127799/1647695651077-dd54cf93-dcb7-466b-854c-39f0a2ab730f.gif#clientId=u361a582e-1c1e-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=390&id=u3142c246&margin=%5Bobject%20Object%5D&name=iShot2022-03-19%2021.13.33.gif&originHeight=1138&originWidth=744&originalType=binary&ratio=1&rotation=0&showTitle=false&size=151210&status=done&style=none&taskId=u99ac7ae4-017e-4dd6-a40e-954f0892235&title=&width=255)
+<iframe src="/images/2022/二）Flutter-动画详解（一）/4.gif">
 
 ```dart
 /// between 之间 ，关键帧动画
@@ -186,7 +187,7 @@ Widget _buildTweenAnimated() {
 
 - 通过 TweenAnimationBuilder 关键帧动画结合 Positioned 位置移动实现翻转
 
-![iShot2022-03-20 17.41.41.gif](https://cdn.nlark.com/yuque/0/2022/gif/2127799/1647769323235-d0879bb0-a0a9-4349-8507-9fee2906c3e0.gif#clientId=uf85cb564-dc8c-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=264&id=u3e0c0131&margin=%5Bobject%20Object%5D&name=iShot2022-03-20%2017.41.41.gif&originHeight=712&originWidth=688&originalType=binary&ratio=1&rotation=0&showTitle=false&size=212394&status=done&style=none&taskId=u7e3da806-f338-4bfb-b459-bc23c639dc4&title=&width=255)
+<iframe src="/images/2022/二）Flutter-动画详解（一）/5.gif">
 
 ```dart
 
@@ -269,7 +270,7 @@ class TWAnimatedCounter extends StatelessWidget {
 ```dart
 /// 继承 Animation<double>
 class AnimationController extends Animation<double> {
-  ```
+  ///```
 }
 
 _controller = AnimationController(
@@ -294,7 +295,7 @@ setState(() {
 });
 ```
 
-![iShot2022-03-20 22.33.34.gif](https://cdn.nlark.com/yuque/0/2022/gif/2127799/1647786835195-42e8b090-56c9-460c-a5b2-2e2781e4ab17.gif#clientId=uae25af0d-109b-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=287&id=u9d43bd03&margin=%5Bobject%20Object%5D&name=iShot2022-03-20%2022.33.34.gif&originHeight=574&originWidth=702&originalType=binary&ratio=1&rotation=0&showTitle=false&size=310738&status=done&style=none&taskId=u7a6e7a11-7294-4c42-a4b1-5c28d8a64ac&title=&width=351)
+<iframe src="/images/2022/二）Flutter-动画详解（一）/6.gif">
 
 ```dart
 /// 旋转动画
@@ -377,7 +378,9 @@ Widget _buildTweenAnimation() {
 ```
 
 ### 案例：交错动画
-![iShot2022-03-23 23.12.23.gif](https://cdn.nlark.com/yuque/0/2022/gif/2127799/1648048356035-6f44e8c5-8488-47cf-b3d2-26e08d396096.gif#clientId=uc5def3e2-247c-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=550&id=ub8ec92e8&margin=%5Bobject%20Object%5D&name=iShot2022-03-23%2023.12.23.gif&originHeight=1100&originWidth=612&originalType=binary&ratio=1&rotation=0&showTitle=false&size=178138&status=done&style=none&taskId=uc24df9a1-22e0-42ae-888a-454adc80973&title=&width=306)
+
+<iframe src="/images/2022/二）Flutter-动画详解（一）/7.gif">
+
 
 ```dart
 /// 交错动画
@@ -448,7 +451,7 @@ class TWSlidingBox extends StatelessWidget {
 - 注意如果使用多个 AnimationController 则需要混入 TickerProviderStateMixin，单个下是SingleTickerProviderStateMixin
 - 通过 await Future.delayed 来让动画处于等待效果
 
-![iShot2022-03-27 22.58.22.gif](https://cdn.nlark.com/yuque/0/2022/gif/2127799/1648393142810-030e5885-9af4-4a25-87a2-841293da7ebf.gif#clientId=uea5ead90-a0aa-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=306&id=uead61ff0&margin=%5Bobject%20Object%5D&name=iShot2022-03-27%2022.58.22.gif&originHeight=612&originWidth=696&originalType=binary&ratio=1&rotation=0&showTitle=false&size=2018192&status=done&style=none&taskId=ucd7c77dc-8d5f-47da-a482-4e0acdb0061&title=&width=348)
+<iframe src="/images/2022/二）Flutter-动画详解（一）/8.gif">
 
 ```dart
 void handleBreatedAnimation() async {
