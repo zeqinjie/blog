@@ -18,7 +18,7 @@ tags:
 
 ### Animated+`WidgetName`
 
-![image](https://github.com/zeqinjie/blog/blob/master/source/images/2022/%E4%BA%8C%EF%BC%89Flutter-%E5%8A%A8%E7%94%BB%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%80%EF%BC%89/2.gif)
+![iShot2022-03-27 21.56.19.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7b76980cf0fa4516a8c36ad01d3c262b~tplv-k3u1fbpfcp-zoom-1.image)
 
 ```dart
 Widget _buildAnimatedContainer() {
@@ -111,7 +111,7 @@ AnimatedSwitcher(
  
 ### 隐式动画都有个 curve 曲线
 
-![image](https://github.com/zeqinjie/blog/blob/master/source/images/2022/%E4%BA%8C%EF%BC%89Flutter-%E5%8A%A8%E7%94%BB%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%80%EF%BC%89/3.gif)
+![iShot2022-03-19 21.15.44.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/da5802aa007b4a80bd9ed1358280997e~tplv-k3u1fbpfcp-zoom-1.image)
 
 ```dart
 /// 更多动画及曲线
@@ -150,7 +150,7 @@ Widget _buildAnimated() {
 - 旋转：Transform.rotate
    - angle: 0.0 -> 6.28 。 旋转一圈 
 
-![image](https://github.com/zeqinjie/blog/blob/master/source/images/2022/%E4%BA%8C%EF%BC%89Flutter-%E5%8A%A8%E7%94%BB%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%80%EF%BC%89/4.gif)
+![iShot2022-03-19 21.13.33.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0ce1bf63b2604b88804c8f23ef3df900~tplv-k3u1fbpfcp-zoom-1.image)
 
 ```dart
 /// between 之间 ，关键帧动画
@@ -186,7 +186,7 @@ Widget _buildTweenAnimated() {
 
 - 通过 TweenAnimationBuilder 关键帧动画结合 Positioned 位置移动实现翻转
 
-![image](https://github.com/zeqinjie/blog/blob/master/source/images/2022/%E4%BA%8C%EF%BC%89Flutter-%E5%8A%A8%E7%94%BB%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%80%EF%BC%89/5.gif)
+![iShot2022-03-20 17.41.41.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/61f492bd94844e49956652ade29cdc67~tplv-k3u1fbpfcp-zoom-1.image)
 
 ```dart
 
@@ -259,6 +259,7 @@ class TWAnimatedCounter extends StatelessWidget {
 - repeat: 重复执行
 - reverse: 倒序
 - lowerBound -> upperBound 默认是 0 -> 1
+
 #### 相关组件有
 
 - RotationTransition
@@ -269,7 +270,7 @@ class TWAnimatedCounter extends StatelessWidget {
 ```dart
 /// 继承 Animation<double>
 class AnimationController extends Animation<double> {
-  ///```
+  // ```
 }
 
 _controller = AnimationController(
@@ -294,7 +295,8 @@ setState(() {
 });
 ```
 
-![image](https://github.com/zeqinjie/blog/blob/master/source/images/2022/%E4%BA%8C%EF%BC%89Flutter-%E5%8A%A8%E7%94%BB%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%80%EF%BC%89/6.gif)
+
+![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/54eb1b44bd0c4ce6a2b2c5eac39123ca~tplv-k3u1fbpfcp-watermark.image?)
 
 ```dart
 /// 旋转动画
@@ -377,9 +379,7 @@ Widget _buildTweenAnimation() {
 ```
 
 ### 案例：交错动画
-
-![image](https://github.com/zeqinjie/blog/blob/master/source/images/2022/%E4%BA%8C%EF%BC%89Flutter-%E5%8A%A8%E7%94%BB%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%80%EF%BC%89/7.gif)
-
+![iShot2022-03-23 23.12.23.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f798037511d448d98095842a878a9b26~tplv-k3u1fbpfcp-zoom-1.image)
 
 ```dart
 /// 交错动画
@@ -450,7 +450,7 @@ class TWSlidingBox extends StatelessWidget {
 - 注意如果使用多个 AnimationController 则需要混入 TickerProviderStateMixin，单个下是SingleTickerProviderStateMixin
 - 通过 await Future.delayed 来让动画处于等待效果
 
-![image](https://github.com/zeqinjie/blog/blob/master/source/images/2022/%E4%BA%8C%EF%BC%89Flutter-%E5%8A%A8%E7%94%BB%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%80%EF%BC%89/8.gif)
+![iShot2022-03-27 22.58.22.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c94be2e8706747159e1ed48442535535~tplv-k3u1fbpfcp-zoom-1.image)
 
 ```dart
 void handleBreatedAnimation() async {
@@ -514,7 +514,7 @@ Widget _buildBreatedAnimation() {
 
 ## 参考
 
-- [demo](https://github.com/zeqinjie/flutter_demo)
+- [Demo](https://github.com/zeqinjie/flutter_demo)
 - [王叔不秃-动画教程](https://www.bilibili.com/video/BV1JZ4y1p7NG/?spm_id_from=pageDriver)
 - [官方 Curves 曲率](https://api.flutter-io.cn/flutter/animation/Curves-class.html)
 - [How to make scrolling counter in flutter](https://stackoverflow.com/questions/56607908/how-to-make-scrolling-counter-in-flutter)
