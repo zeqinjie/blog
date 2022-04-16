@@ -1,5 +1,5 @@
 ---
-title: 四）Flutter 布局详解
+title: 四）Flutter 布局详解（一）
 date: 2022-04-16 11:32:43
 categories: "Flutter"
 tags:
@@ -7,15 +7,16 @@ tags:
 ---
 
 ## 前言
-对于约束布局深入探索，从布局原理 -> 布局约束 -> 打破布局探索
+对于约束布局深入探索，可以从布局原理 -> 布局约束 -> 打破布局去探索。
 
 ## 布局原理
 > 感兴趣可以看这篇 [传送门](https://juejin.cn/post/6897012238318895117#heading-7)
 
-StatelessWidget 和StatefulWidget 其实只是 **组合类 **的控件，实际上他并不负责绘制，所有我们在屏幕上看到的UI 最终几乎都会通过 **RenderObjectWidget**实现。而 **RenderObjectWidget **中有个 createRenderObject() 方法生成RenderObject对象，RenderObject 实际负责实际 的 layout() 和 paint()
-
-Flutter的渲染流程关键在于 **drawFrame() **方法中
-整个过程和原生分为三个阶段 **build()**, **layout()**, **paint()**
+- `StatelessWidget` 和 `StatefulWidget` 是 **组合类** 的控件，因此他不负责绘制，本质上是通过 **RenderObjectWidget** 实现布局。在 **RenderObjectWidget** 中有个 `createRenderObject()` 方法返回 **RenderObject** 对象，`RenderObject` 实际负责实际的 `layout()` 和 `paint()`
+   - 单子布局 `SingleChildRenderObjectWidget` 
+   - 多子布局 `MultiChildRenderObjectWidget`
+- Flutter的渲染流程关键在于 **drawFrame()** 方法中
+- 整个过程和原生分为三个阶段 **build()**, **layout()**, **paint()** 这一块我们可以通过手动实现 `RenderObject` 去了解
 
 ```dart
 void drawFrame() {
@@ -47,6 +48,7 @@ const BoxConstraints.expand({
        maxHeight = height ?? double.infinity;
 
 ```
+
 ### 什么是松约束？
 _loose_（松约束）：当 minWidth 和 minHeight 为 0，这时传递给子类的是一个不确定的宽高值
 
@@ -66,8 +68,9 @@ _loose_（松约束）：当 minWidth 和 minHeight 为 0，这时传递给子�
 - unbounded（无界）： 最小约束是 double.infinity
    - [hasInfiniteWidth](https://api.flutter-io.cn/flutter/rendering/BoxConstraints/hasInfiniteWidth.html)  无限的宽度
    - [hasInfiniteHeight](https://api.flutter-io.cn/flutter/rendering/BoxConstraints/hasInfiniteHeight.html)  无限的高度
+
 ### 布局的过程
-> **向下传递约束 & 向上传递尺寸**
+**向下传递约束 & 向上传递尺寸**
 
 #### 流程
 
@@ -359,7 +362,7 @@ class ZQUnderLineTextDelegate extends MultiChildLayoutDelegate {
 #### RenderObject
 
 - 自定义 ZQRenderBox 继承 `SingleChildRenderObjectWidget`
-   - 多子布局 `SingleChildRenderObjectWidget` & `MultiChildRenderObjectWidget` 都是继承 RenderObjectWidget
+   - 布局类 `SingleChildRenderObjectWidget` & `MultiChildRenderObjectWidget` 都是继承 RenderObjectWidget
    - 重写 `createRenderObject` 方法返回一个 RenderObject 对象
    - 📢 如果需要热更新，实现 updateRenderObject
 - 自定义 RenderZQRenderBox 继承 `RenderBox`
