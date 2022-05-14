@@ -12,7 +12,7 @@ tags:
 
 ## 截图如下
 
-![](/images/2022/记一次 Flutter 项目引入 Google Map 后模拟器编译异常/1.png)
+![](/images/2022/记一次 Flutter 项目引入 Google Map/1.png)
 
 - 问题的初步是发生在 M1 电脑模拟器编译运行会报错误信息，如上截图。
 
@@ -35,4 +35,6 @@ EXCLUDED_ARCHS[sdk=iphonesimulator*]=i386 arm64
 ```
 
 ## 截图如下
-![](/images/2022/记一次 Flutter 项目引入 Google Map 后模拟器编译异常/2.png)
+
+![](/images/2022/记一次 Flutter 项目引入 Google Map/2.png)
+
