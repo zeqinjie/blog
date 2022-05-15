@@ -11,7 +11,7 @@ tags:
 个划时代的开源项目，它彻底释放了计算虚拟化的威力，极大提高了应用的维护效率，降低了云计算应用开发的成本！使用 Docker，可以让应用的部署、测试和分发都变得前所未有的高效和轻松！
 ### Docker 与 虚拟机
 
-![](/images/2022/Docker 基础/1.png)
+![image](/images/2022/Docker/1.png)
 
 ## Docker 安装
 ### 方式一: Homebrew
@@ -21,11 +21,11 @@ brew cask install docker
 ### 方式二: 桌面程序
 访问官方地址[ 传送门](https://www.docker.com/get-started)，在 Docker Desktop 下选择你当前系统对应的软件进行下载安装
 
-![](/images/2022/Docker 基础/2.png)
+![image](/images/2022/Docker/2.png)
 
 ### 安装后 Docker 命令查看
 
-![](/images/2022/Docker 基础/3.png)
+![image](/images/2022/Docker/3.png)
 
 ```shell
 # docker 帮助信息
@@ -39,7 +39,7 @@ docker info
 ## Docker 基本概念
 ### 关系图
 
-![](/images/2022/Docker 基础/4.png)
+![image](/images/2022/Docker/4.png)
 
 ```shell
 注册服务器（Registry）
