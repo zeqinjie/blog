@@ -54,13 +54,15 @@ flutter pub global activate unpub
 
 - 查找 `app.dart` ， 修改使用 `_getUploaderEmail` 的地方
 
+- 第一处
+
 ![images](/images/2022/Flutter搭建私有Pub仓库Docker部署/4.png)
 
-- 第一个
+- 第二处
 
 ![images](/images/2022/Flutter搭建私有Pub仓库Docker部署/5.png)
 
-- 第二个
+- 第三处
 
 ![images](/images/2022/Flutter搭建私有Pub仓库Docker部署/6.png)
 
