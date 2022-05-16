@@ -214,6 +214,8 @@ dart --snapshot=pub.dart.snapshot bin/pub.dart
 
 ### 发布 Pub 私有包
 
+📢 注意 `http://192.168.x.xx:4000/` 是自己的 pub 私有包服务 ip 地址，否则会上传失败
+
 #### 创建 dev package 包
 
 ```shell
@@ -234,7 +236,7 @@ name: zq_log
 description: A flutter log tool for developing.
 version: 0.0.2
 homepage: https://code.addcn.com/tw591fluttermodules/zq_log
-publish_to: http://192.168.8.75:4000/
+publish_to: http://192.168.x.xx:4000/
 ```
 
 #### 检测命令
@@ -246,7 +248,7 @@ flutter packages pub publish --dry-run
 #### 发布包到私有包管理平台
 
 ```shell
-flutter packages pub publish --server=http://192.168.8.75:4000/
+flutter packages pub publish --server=http://192.168.x.xx:4000/
 ```
 #### 发布成功
 
@@ -260,7 +262,7 @@ flutter packages pub publish --server=http://192.168.8.75:4000/
     version: ^0.0.1
     hosted:
       name: zq_log
-      url: http://192.168.8.75:4000/
+      url: http://192.168.x.xx:4000/
 ```
 
 ## `通过 Docker 方便大家部署`
