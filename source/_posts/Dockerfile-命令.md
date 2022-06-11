@@ -14,7 +14,7 @@ ARG version=1.0.0
 FROM golang:${version}
 ```
 
-![image](/images/2022/Docker/7.png)
+![image](/images/2022/Docker/8.png)
 
 > 共用镜像
 
