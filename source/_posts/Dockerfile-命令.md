@@ -14,7 +14,7 @@ ARG version=1.0.0
 FROM golang:${version}
 ```
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/2127799/1653576675893-4fac00a0-1126-471c-b21f-45e0b24676be.png#clientId=u1d07a874-6bbf-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=332&id=u2a24a3c6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=788&originWidth=1038&originalType=binary&ratio=1&rotation=0&showTitle=false&size=94067&status=done&style=none&taskId=ub35f7f37-104e-4900-9a35-7289df464d2&title=&width=437)
+![image](/images/2022/Docker/7.png)
 
 > 共用镜像
 
