@@ -1,5 +1,5 @@
 ---
-title: Flutter aws 签名解决方案 aws_signature_v4
+title: Flutter-aws-signature-v4-问题记录
 date: 2023-01-08 21:13:17
 categories: "Flutter"
 tags:
@@ -8,7 +8,7 @@ tags:
 
 ## 前言
 
-近期 Flutter IM 的模块优化，需要将素材生成 AWS Signature v4签名以上传到s3。因此后端新增两个接口，一个是预上传的接口获取上传 aws 相关参数，及获取签名需要 session_token 的接口。做了下笔记
+近期 Flutter IM 的模块优化，需要将素材生成 AWS Signature v4签名以上传到s3。后端新增两个接口，一个是预上传的接口获取上传 aws 相关参数，及获取签名需要 session_token 的接口。做了下遇到问题的笔记
 
 
 
