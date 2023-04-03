@@ -753,7 +753,9 @@ entrypointArgs:
 }
 ```
 
--   通过 spawnWithEntrypoint 源码我们知道了采用 Group 管理多引擎，为什么能大大降低内存原因：因为多个引擎的公有的是同一个 _shell 资源~
+-   通过 spawnWithEntrypoint 源码我们知道了采用 Group 管理多引擎，为什么能大大降低内存原因：因为多个引擎的公用的是同一个 _shell 部分资源~
+
+
 
 ## 题外话
 
