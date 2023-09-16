@@ -14,15 +14,15 @@ tags:
 - 创建 Providers & channel
 - 配置 bundle ID
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b0f5356b2b76452b9aee62c33253d526~tplv-k3u1fbpfcp-zoom-1.image)
+![](/images/2022/Flutter第三方登录/1.png)
 
 ### 注意设置 URL Type
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/399b9f1ff9a841fc95e14ea1deeff470~tplv-k3u1fbpfcp-watermark.image?)
+![](/images/2022/Flutter第三方登录/2.png)
 
 - 配置如下 [传送门](https://github.com/line/line-sdk-ios-swift/issues/173)
 
-![image](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f50c4ab0dc80401dac86b039cb9bc583~tplv-k3u1fbpfcp-zoom-1.image)
+![](/images/2022/Flutter第三方登录/3.png)
 
 ### 代码
 
@@ -102,11 +102,11 @@ void lineLoginOutHandler() async {
 
 ### 创建 OAuth 客户端 ID
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71bb3e7fe8c6412bb1ddd35ff9f74088~tplv-k3u1fbpfcp-zoom-1.image)
+![](/images/2022/Flutter第三方登录/4.png)
 
 ### 配置 OAuth 同意画面
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7a212d34e84545eb878617af17d124ee~tplv-k3u1fbpfcp-zoom-1.image)
+![](/images/2022/Flutter第三方登录/5.png)
 
 ### 注意
 
@@ -114,17 +114,17 @@ void lineLoginOutHandler() async {
 
 - 注意设置 URL Schemes 是凭证 iOS 网址通讯协定
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2b88c1d76c154c3fbc20dd6c56143422~tplv-k3u1fbpfcp-watermark.image?)
+![](/images/2022/Flutter第三方登录/6.png)
 
 #### 设置 OAuth
 
 - 如果没有设置配置 OAuth 同意画面如下问题
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0cca69ce19d2451b8c484326ee81c202~tplv-k3u1fbpfcp-zoom-1.image)
+![](/images/2022/Flutter第三方登录/7.png)
 
 - 需要对自己站台配置 DNS 设定，[传送门](https://search.google.com/search-console/about)
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0a901ed71a3a481b8d2dd637e6e0a6be~tplv-k3u1fbpfcp-zoom-1.image)
+![](/images/2022/Flutter第三方登录/8.png)
 
 ### 代码
 
@@ -198,14 +198,14 @@ void googleLoginOutHandler() async {
 
 ### 创建应用，并授权
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a32aa57c5a8046f788620afbf1705920~tplv-k3u1fbpfcp-zoom-1.image)
+![](/images/2022/Flutter第三方登录/9.png)
 
 ### 注意设置 URL Type 等信息
 - 应用编号 (FacebookAppID)
 - 客户端口令 (FacebookClientToken)
 - 显示名称（FacebookDisplayName）
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/acde4530f6934a63a87ef8ae1998634b~tplv-k3u1fbpfcp-zoom-1.image)
+![](/images/2022/Flutter第三方登录/10.png)
 
 ### 代码
 

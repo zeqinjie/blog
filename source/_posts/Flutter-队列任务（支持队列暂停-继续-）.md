@@ -8,7 +8,7 @@ tags:
 
 最近 Flutter 重构原生首页，大部分的 App 随着产品迭代都会在首页加各自弹窗，比如广告弹窗，推送弹窗，版本更新提示等等。在这种场景下不得不用队列去管理弹窗，让弹窗按顺序去一一弹出。效果如下~
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5b2216562990438a96522050fe540987~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=295&h=640&s=1607760&e=gif&f=52&b=fdfdfd)
+![](/images/2023/Flutter-队列任务/1.gif)
 
 ## Use
 
@@ -231,7 +231,7 @@ print('onComplete results $results');
 
 项目中效果
 
-![Simulator Screen Recording - iPhone 14 Pro Max - 2023-09-16 at 14.34.39.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/553795a6cec34a1da38407cbb4e60732~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=296&h=640&s=6736859&e=gif&f=110&b=fefdfd)
+![](/images/2023/Flutter-队列任务/2.gif)
 
 ## Last
 

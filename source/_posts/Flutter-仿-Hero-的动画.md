@@ -9,7 +9,7 @@ tags:
 Flutter 模仿 Hero 动画的效果，实现逻辑比较简单，就是用 Stack 结合 AnimatedBuilder 组件实现类似 Hero 的转场的动画效果。
 
 ## 效果
-![Simulator Screen Recording - iPhone 14 Pro - 2023-08-08 at 22.32.59.gif](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fcc8879fcddd4dc382efd479fb79d10f~tplv-k3u1fbpfcp-watermark.image?)
+![](/images/2023/Flutter 仿 Hero 的动画/1.gif)
 
 ## 代码
 ### DEMO

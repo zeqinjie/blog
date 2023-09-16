@@ -8,7 +8,7 @@ tags:
 
 ## 流程图
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3132df83ca814d1b8b074b50a0f994c2~tplv-k3u1fbpfcp-zoom-1.image)
+![](/images/2023/FlutterEngineGroup 引擎启动流程/1.png)
 
 ## 创建 FlutterEngineGroup
 
@@ -399,7 +399,7 @@ flutter::Settings FLTDefaultSettingsForBundle(NSBundle* bundle) {
 
 - 从源码读到发现 mainBundle key FLTEnableImpeller 是设置 impeller 渲染模式。截图默认设置 YES，所以我们也可以关闭 impeller 采用 skia 渲染引擎~
 
-![iShot_2023-04-01_21.56.15.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9bc6ce2414174d4a836306ebacf0cbbb~tplv-k3u1fbpfcp-zoom-1.image)
+![](/images/2023/FlutterEngineGroup 引擎启动流程/2.png)
 
 - 1、Flutter 3.9.0 版本中发现，默认Flutter Engine中资源缓存所占用的最大内存大小其实是按屏幕大小动态调整的~很神奇吧~~
 - 2、因此我们阅读源码去发现 Flutter 引擎一些默认配置~
@@ -761,7 +761,7 @@ entrypointArgs:
 
 -   Flutter 网络请求是在哪个线程中执行的吗？会阻塞引发 App 卡顿吗？
 
-## ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/839563def4764ac28b54e828c3f0ffb1~tplv-k3u1fbpfcp-zoom-1.image)
+## ![](/images/2023/FlutterEngineGroup 引擎启动流程/3.png)
 
 ## 参考
 

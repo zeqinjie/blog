@@ -27,10 +27,10 @@ dependencies:
 ## 效果
 
 ### demo 演示
-![1.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4027fb563f764ee7b032e1fb94d2a498~tplv-k3u1fbpfcp-watermark.image?)
+![](/images/2022/一个简单的-Flutter-日历组件/1.gif)
 
 ### 业务使用 headerView
-![2.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/976a010d71e847fd9b7d9f47ffc2a175~tplv-k3u1fbpfcp-watermark.image?)
+![](/images/2022/一个简单的-Flutter-日历组件/2.gif)
 
 ## 使用
 

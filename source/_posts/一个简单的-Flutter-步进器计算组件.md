@@ -14,7 +14,7 @@ tags:
 - 支持文本框手动输入，失去焦点后结果会自动校正为 5 的倍数
 - 每次结果变化会有个放大动画的效果
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9475e6a9d4624547bcc1732bea23ad1b~tplv-k3u1fbpfcp-watermark.image?)
+![](/images/2022/一个简单的-Flutter-步进器计算组件/1.gif)
 
 Github：[tw_step_counter](https://github.com/zeqinjie/tw_step_counter)
 
@@ -26,7 +26,7 @@ dependencies:
 
 ## 效果
 
-![1.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7b9e01552d374bc1b29f58b8b4de3294~tplv-k3u1fbpfcp-watermark.image?)
+![](/images/2022/一个简单的-Flutter-步进器计算组件/2.gif)
 
 ## 使用
 
