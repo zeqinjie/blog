@@ -8,7 +8,7 @@ tags:
 
 ## 流程图
 
-![](/images/2023/FlutterEngineGroup 引擎启动流程/1.png)
+![](/images/2023/FlutterEngineGroup引擎启动流程/1.png)
 
 ## 创建 FlutterEngineGroup
 
@@ -759,9 +759,13 @@ entrypointArgs:
 
 ## 题外话
 
--   Flutter 网络请求是在哪个线程中执行的吗？会阻塞引发 App 卡顿吗？
+- Flutter 网络请求是在哪个线程中执行的吗？会阻塞引发 App 卡顿吗？
 
-## ![](/images/2023/FlutterEngineGroup 引擎启动流程/3.png)
+  
+
+## ![](/images/2023/FlutterEngineGroup引擎启动流程/3.png)
+
+
 
 ## 参考
 
