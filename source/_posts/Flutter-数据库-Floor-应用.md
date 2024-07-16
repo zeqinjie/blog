@@ -66,7 +66,7 @@ NoSQL (Not Only SQL) 数据库:
 
 ### 层级关系
 
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/2127799/1709368682344-246579b4-aafa-457a-9752-afcf02983e9c.png#averageHue=%23fdaa90&clientId=u83ca6167-b776-4&from=paste&height=413&id=uc85aa086&originHeight=1192&originWidth=1648&originalType=binary&ratio=2&rotation=0&showTitle=false&size=100860&status=done&style=none&taskId=ud79b80d7-9a9e-4531-81fb-16c4afe55df&title=&width=571)
+![](/images/2024/Flutter-数据库-Floor-应用/1.png)
 
 ### 引入插件
 
