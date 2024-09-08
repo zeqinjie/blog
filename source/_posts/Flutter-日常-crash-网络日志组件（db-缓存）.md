@@ -1,5 +1,5 @@
 ---
-title: Flutter 日常,crash,网络日志组件（db 缓存）
+title: Flutter tw_logger 一款支持缓存 db 的日志组件（network、crash、regular）
 date: 2024-09-08 16:15:01
 categories: "Flutter"
 tags:
@@ -17,7 +17,7 @@ tags:
 
 ## 效果
 
-![](/images/2023/tw_logger/1.gif)
+![](/images/2024/tw_logger/1.gif)
 
 ## Use
 
@@ -233,7 +233,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 ## 最后
-调整后已上传 [pub]()，使用如下
+调整后已上传 [pub](https://pub.dev/packages/tw_logger)，使用如下
 
 ```yaml
 dependencies:
